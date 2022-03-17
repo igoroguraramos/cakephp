@@ -88,4 +88,8 @@ return static function (RouteBuilder $routes) {
      * });
      * ```
      */
+
+    $routes->scope('/api', ['_namePrefix' => 'api:'], function ($routes) {
+        $routes->resources('Posts');
+    });
 };
